@@ -1,0 +1,36 @@
+@import "./../../../../assets/base";
+
+$rippleColor: rgba($primary, .8);
+
+.ldsRipple {
+  position: relative;
+  display: inline-block;
+}
+
+.ldsRipple div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px solid $rippleColor;
+  opacity: 1;
+  border-radius: 50%;
+  animation: ldsRipple 2s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+
+.ldsRipple div:nth-child(2) {
+  animation-delay: -1s;
+}
+
+@keyframes ldsRipple {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    width: 95%;
+    height: 95%;
+    opacity: 0;
+  }
+}

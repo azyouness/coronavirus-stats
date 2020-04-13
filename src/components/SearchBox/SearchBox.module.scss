@@ -1,0 +1,17 @@
+@import "./../../assets/base";
+
+.box {
+  .sortBox {
+    padding: 0;
+    display: flex;
+    border-bottom: 1px solid $border-color;
+
+    li {
+      width: 50%;
+
+      &:first-child {
+        border-right: 1px solid $border-color;
+      }
+    }
+  }
+}

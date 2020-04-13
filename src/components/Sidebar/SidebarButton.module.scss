@@ -1,0 +1,54 @@
+@import "./../../assets/base";
+
+.button {
+  z-index: $top-zindex;
+  position: absolute;
+  left: calc(100% + 5px);
+  top: 10px;
+  display: flex;
+  flex-wrap: unset;
+  align-items: center;
+  color: $primary;
+  cursor: pointer;
+  padding: 5px;
+  background: $dark-bg;
+  box-shadow: 0 0 15px $dark-bg;
+  border-radius: 4px;
+
+  .icon {
+    font-size: 1.5rem;
+    line-height: 0;
+    transition: color 0.2s, transform 0.5s;
+    transition: all 0.2s;
+  }
+
+  .text {
+    margin-left: 5px;
+    font-size: 0.85rem;
+    font-weight: $medium;
+    text-transform: uppercase;
+    text-align: left;
+    white-space: nowrap;
+    padding: 5px;
+    border-left: 1px solid rgba($primary, .5);
+  }
+
+  &:hover {
+    .icon {
+      color: $green;
+      transform: scale(1.2) translateX(-4px);
+    }
+  }
+
+  &.close {
+    .icon {
+      transform: rotateY(180deg);
+    }
+
+    &:hover {
+      .icon {
+        transform: rotateY(180deg) scale(1.2) translateX(-4px);
+      }
+    }
+  }
+}

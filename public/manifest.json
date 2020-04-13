@@ -1,0 +1,21 @@
+{
+  "short_name": "Corona",
+  "name": "Corona Status",
+  "description": "Coronavirus: Confirmed Cases, Deaths and Recoveries by Country",
+  "icons": [
+    {
+      "src": "favicon.png",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "logo200.png",
+      "type": "image/png",
+      "sizes": "200x200"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#1B1C22",
+  "background_color": "#1B1C22"
+}

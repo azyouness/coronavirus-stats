@@ -1,0 +1,19 @@
+// @import-normalize;
+@import "./assets/base";
+@import "./assets/reset";
+
+body {
+  margin: 0;
+  font-family: $font;
+  font-size: 1rem;
+  color: $text-primary;
+  background-color: $dark-bg;
+}
+
+input {
+  outline: none;
+}
+
+button {
+  outline: none;
+}

@@ -1,0 +1,50 @@
+@import "./../../../assets//base";
+
+.notif {
+  z-index: $top-zindex - 1;
+  position: fixed;
+  bottom: 2vw;
+  right: 5vw;
+  max-width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $white;
+  background: $red;
+  font-size: 0.8rem;
+  border-radius: 4px;
+  transform: translateX(130%);
+  opacity: 0;
+  transition: opacity 0.2s, transform 0.2s cubic-bezier(0.83, 0, 0.17, 1);
+
+  &.open {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  &.close {
+    opacity: 0;
+    transform: translateX(130%);
+  }
+
+  .icon {
+    margin: 0 8px;
+    line-height: 0;
+    font-size: 0.9rem;
+  }
+
+  .text {
+    flex-grow: 1;
+    font-weight: $medium;
+    padding: 5px 0;
+  }
+
+  .closeBtn {
+    padding: 10px;
+    line-height: 0;
+    cursor: pointer;
+    color: $white;
+    border: none;
+    background: transparent;
+  }
+}

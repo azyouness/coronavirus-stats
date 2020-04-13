@@ -1,0 +1,44 @@
+@import "./../../assets/base";
+
+.mainContent {
+  min-height: 100vh;
+  position: relative;
+  $padding: 2vw;
+  padding: $padding;
+  overflow: hidden;
+  overflow-y: auto;
+
+  .githubButton {
+    z-index: $top-zindex;
+    position: fixed;
+    top: 1.5vw;
+    right: 1.5vw;
+    color: $white;
+    line-height: 0;
+    font-size: 2.3rem;
+    border-radius: 50%;
+    opacity: 0.4;
+    transition: opacity 0.2s;
+    background-color: $dark-bg;
+  
+    &:hover {
+      opacity: 0.9;
+    }
+
+  }
+  
+  @media only screen and (max-width: 768px) {
+    padding: 3vw;
+  }
+  
+  @media only screen and (max-width: 480px) {
+    padding: 4vw;
+
+    .githubButton {
+      top: auto;
+      right: auto;
+      bottom: 3vw;
+      left: 3vw;
+    }
+  }
+}

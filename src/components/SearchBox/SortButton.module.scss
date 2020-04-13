@@ -1,0 +1,17 @@
+@import "./../../assets/base";
+
+.button {
+  text-align: center;
+  padding: 5px;
+  color: darken($text-secondary, 20%);
+  cursor: pointer;
+  transition: background 0.2s;
+
+  &:hover {
+    background: rgba($white, .01);
+  }
+
+  &.active {
+    color: $primary;
+  }
+}

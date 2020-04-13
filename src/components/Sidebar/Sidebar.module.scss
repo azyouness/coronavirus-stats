@@ -1,0 +1,18 @@
+@import "./../../assets/base";
+
+.sidebar {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: lighten($dark-bg, 1%);
+
+  // .search {
+
+  // }
+
+  .list {
+    flex-grow: 1;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+}

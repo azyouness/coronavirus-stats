@@ -1,0 +1,12 @@
+@import "./../../../assets/base";
+
+.loader {
+  text-align: center;
+  
+  .text {
+    font-size: 0.9rem;
+    font-weight: $normal;
+    letter-spacing: 1px;
+    color: rgba($primary, 0.7);
+  }
+}

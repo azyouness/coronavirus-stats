@@ -1,0 +1,87 @@
+
+.world-counter {
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: center;
+
+  .counter-item {
+    z-index: 0;
+    position: relative;
+    width: calc(100% / 3);
+    margin-right: 1.5vw;
+    padding: 3vw;
+    overflow: hidden;
+    border-radius: 5px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  
+    &::before {
+      $sz: 4px;
+      content: "";
+      border-radius: 5px;
+      z-index: -1;
+      position: absolute;
+      height: calc(100% - #{$sz});
+      width: calc(100% - #{$sz});
+      top: $sz/2;
+      left: $sz/2;
+      background: $dark-bg;
+    }
+  
+    .counter-item-icon {
+      font-size: 5rem;
+      line-height: 0;
+    }
+    
+    .counter-item-label {
+      margin: 10px 0;
+      text-transform: capitalize;
+      font-size: 1.8rem;
+      font-weight: $medium;
+    }
+  
+    .counter-item-value {
+      font-size: 1.8rem;
+      font-weight: $medium;
+      letter-spacing: 1px;
+    }
+  
+    &.confirmed {
+      background: linear-gradient(to bottom, $confirmed, transparent);
+  
+      .counter-item-icon {
+        color: $confirmed;
+      }
+    }
+  
+    &.recovered {
+      background: linear-gradient(to bottom, $recovered, transparent);
+  
+      .counter-item-icon {
+        color: $recovered;
+      }
+    }
+  
+    &.deaths {
+      background: linear-gradient(to bottom, $deaths, transparent);
+  
+      .counter-item-icon {
+        color: $deaths;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 600px) { // 568
+    display: block;
+
+    .counter-item {
+      width: 100%;
+      margin-right: 0;
+      padding: 5vw;
+    }
+  }
+}

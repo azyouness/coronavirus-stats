@@ -1,0 +1,40 @@
+
+
+.section {
+  display: flex;
+  align-items: center;
+
+  // .counter,
+  // .chart {
+  //   border: 1px solid;
+  // }
+
+  .counter {
+    flex-grow: 1;
+    margin-right: 1vw;
+  }
+  
+  .chart {
+    width: 50%;
+    height: 370px;
+  }
+
+  @media only screen and (max-width: 700px) {
+    // flex-direction: column-reverse;
+    flex-direction: column;
+
+    .counter,
+    .chart {
+      width: 100%;
+      margin: 0;
+    }
+
+    .counter {
+      margin-bottom: 20px;
+    }
+
+    // .chart {
+      
+    // }
+  }
+}

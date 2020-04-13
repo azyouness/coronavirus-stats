@@ -1,0 +1,63 @@
+@import "./assets/base";
+
+$sidebar-trans-easing: cubic-bezier(0.16, 1, 0.3, 1);
+$sidebar-trans-time: .6s;
+
+.app {
+  position: relative;
+  overflow: hidden;
+
+  .side {
+    z-index: $top-zindex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: $sidebar-width;
+    border-right: 1px solid $border-color;
+    transition: transform $sidebar-trans-time $sidebar-trans-easing;
+  }
+
+  .main {
+    position: relative;
+    margin-left: $sidebar-width;
+    transition: margin-left $sidebar-trans-time $sidebar-trans-easing;
+  }
+
+  &.sideOpen {
+    .side {
+      transform: translateX(0);
+    }
+
+    .main {
+      margin-left: $sidebar-width;
+    }
+  }
+
+  &.sideClose {
+    .side {
+      transform: translateX(-100%);
+    }
+
+    .main {
+      margin-left: 0;
+    }
+  }
+
+  @media only screen and (max-width: 1080px) {    
+    .main {
+      margin-left: 0;
+    }
+
+    &.sideOpen {
+      .main {
+        margin-left: 0;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 480px) {
+    .side {
+      width: $sidebar-width - 60px;
+    }
+  }
+}

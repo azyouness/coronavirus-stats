@@ -1,0 +1,57 @@
+@import "./../../assets/base";
+
+.item {
+  padding: 12px 1.5vw;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: $text-secondary;
+  transition: transform 0.15s;
+
+  .countryName {
+    flex-grow: 1;
+  }
+
+  .countryCases {
+    text-align: right;
+    transition: color 0.15s;
+  }
+
+  .activeIcon {
+    color: $green;
+    width: 0;
+    text-align: center;
+    line-height: 0;
+    overflow: hidden;
+    font-size: 16px;
+    transition: width 0.15s, transform 0.2s;
+  }
+
+  &:hover,
+  &.active {
+    transform: scale(1.04);
+    color: $white;
+
+    .countryCases {
+      color: $confirmed;
+    }
+  }
+
+  &.active {
+    font-weight: $medium;
+
+    .activeIcon {
+      width: 22px;
+    }
+
+    &:hover {
+      .activeIcon {
+        transform: rotateY(180deg);
+      }
+    }
+  }
+
+  @media only screen and (max-width: 480px) {
+    padding: 3vw;
+  }
+}

@@ -1,0 +1,52 @@
+@import "./../../assets/base";
+
+.field {
+  position: relative;
+
+  .clearButton {
+    // border: 1px solid;
+    $sz: 38px;
+    position: absolute;
+    top: 50%;
+    left: 1%;
+    transform: translateY(-50%);
+    width: $sz;
+    height: $sz;
+    border-radius: 50%;
+    cursor: pointer;
+    color: $text-secondary;
+    background: transparent;
+    border: none;
+    text-align: center;
+    font-size: 1.8rem;
+    transition: color 0.2s;
+
+    &:hover {
+      color: $primary;
+    }
+  }
+
+  .input {
+    margin: 0;
+    display: block;
+    width: 100%;
+    padding: 20px;
+    font-size: 1rem;
+    font-weight: $medium;
+    text-align: center;
+    border: none;
+    background: transparent;
+    color: $primary;
+    border-bottom: 1px solid $border-color;
+    transition: border 0.25s;
+
+    &:focus {
+      border-bottom-color: $primary;
+    }
+
+    &::placeholder {
+      font-weight: $light;
+      color: rgba($text-secondary, 0.5);
+    }
+  }
+}
