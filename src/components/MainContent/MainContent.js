@@ -22,7 +22,7 @@ export default ({ selectedCountry }) => {
 const GithubButton = () => (
   <a
     className={styles.githubButton}
-    href="https://github.com/ExpDev07/coronavirus-tracker-api"
+    href="https://github.com/azyouness/coronavirus-stats"
     target="_blank"
     rel="noreferrer noopener"
   >
