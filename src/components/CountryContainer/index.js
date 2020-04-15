@@ -1,2 +1,1 @@
-import CountryContainer from "./CountryContainer";
-export default CountryContainer;
+export { default } from "./CountryContainer";

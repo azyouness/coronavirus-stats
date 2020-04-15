@@ -1,2 +1,1 @@
-import CountryContent from "./CountryContent";
-export default CountryContent;
+export { default } from "./CountryContent";

@@ -1,2 +1,1 @@
-import CountriesList from "./CountriesList";
-export default CountriesList;
+export { default } from "./CountriesList";

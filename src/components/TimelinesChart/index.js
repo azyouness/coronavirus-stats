@@ -1,2 +1,1 @@
-import TimelinesChart from "./TimelinesChart";
-export default TimelinesChart;
+export { default } from "./TimelinesChart";

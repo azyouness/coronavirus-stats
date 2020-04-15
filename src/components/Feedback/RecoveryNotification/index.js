@@ -1,2 +1,1 @@
-import RecoveryNotification from "./RecoveryNotification";
-export default RecoveryNotification;
+export { default } from "./RecoveryNotification";

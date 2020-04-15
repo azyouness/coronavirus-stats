@@ -1,2 +1,1 @@
-import ContentTitle from "./ContentTitle";
-export default ContentTitle;
+export { default } from "./ContentTitle";

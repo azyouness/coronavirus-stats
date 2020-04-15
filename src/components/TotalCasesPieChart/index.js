@@ -1,2 +1,1 @@
-import TotalCasesPieChart from "./TotalCasesPieChart";
-export default TotalCasesPieChart;
+export { default } from "./TotalCasesPieChart";
