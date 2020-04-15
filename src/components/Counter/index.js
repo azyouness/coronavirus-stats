@@ -1,7 +1,7 @@
 import Counter from "./Counter";
 import CounterItem from "./CounterItem";
 
-export default {
+export {
   Counter,
   CounterItem,
 };

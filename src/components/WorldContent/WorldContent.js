@@ -1,7 +1,7 @@
 import React from "react";
 // components
 import ContentTitle from "./../ContentTitle";
-import Counter from "./../Counter/Counter";
+import { Counter } from "./../Counter";
 import TotalCasesPieChart from "./../TotalCasesPieChart";
 // libs, ...
 import { extractLatestCasesChartData } from "./../../utils";
