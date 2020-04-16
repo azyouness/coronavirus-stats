@@ -2,9 +2,9 @@ import React from "react";
 import PropTypes from "prop-types";
 import CountUp from "react-countup";
 // icons
-import { IoIosCloseCircleOutline as ConfirmedIcon } from "react-icons/io";
+import { IoIosCloseCircleOutline as DeathsIcon } from "react-icons/io";
 import { IoIosCheckmarkCircleOutline as RecoveredIcon } from "react-icons/io";
-import { IoIosRemoveCircleOutline as DeathsIcon } from "react-icons/io";
+import { IoIosRemoveCircleOutline as ConfirmedIcon } from "react-icons/io";
 
 
 const CounterItem = ({ type, value }) => {
@@ -12,13 +12,13 @@ const CounterItem = ({ type, value }) => {
   let label = "";
 
   if (type === "confirmed") {
-    Icon = DeathsIcon;
+    Icon = ConfirmedIcon;
     label = "Confirmed";
   } else if (type === "recovered") {
     Icon = RecoveredIcon;
     label = "Recovered";
   } else if (type === "deaths") {
-    Icon = ConfirmedIcon;
+    Icon = DeathsIcon;
     label = "Deaths";
   }
 
